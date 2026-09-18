@@ -136,3 +136,61 @@ section h2 {
 section p {
 	font-size: 1.1rem;
 }
+/* =========================================
+   PHASE 3: RESPONSIVE DESIGN
+   ========================================= */
+
+/* -----------------------------------------
+   3.1 BREAKPOINTS & MEDIA QUERIES
+   We use max-width to apply styles for screens 
+   smaller than 768px (Tablets and Mobile phones).
+   ----------------------------------------- */
+@media (max-width: 768px) {
+    
+    /* 1. Adjust the layout structure */
+    body {
+        padding: 10px; /* Less padding on small screens */
+    }
+
+    /* 2. Modify Navigation for Mobile */
+    nav {
+        flex-direction: column; /* Stack links vertically instead of side-by-side */
+        align-items: center;    /* Center the links */
+        gap: 1rem;              /* Adjust spacing */
+    }
+
+    /* Undo the "Cart" button push on mobile so it sits neatly */
+    nav a[href="#"] {
+        margin-left: 0; 
+        width: 100%; /* Make the cart button full width on mobile */
+        text-align: center;
+    }
+
+    /* 3. Modify Typography for Mobile */
+    h1 {
+        font-size: 1.8rem; /* Make the main heading smaller on phones */
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 4. Modify Main Content Layout */
+    main {
+        padding: 1.5rem; /* Less padding inside the white box */
+        grid-template-columns: 1fr; /* Ensures content is single column */
+    }
+}
+
+/* -----------------------------------------
+   3.3 RESPONSIVE IMAGES
+   Ensures images never overflow their container
+   and scale smoothly on smaller screens.
+   ----------------------------------------- */
+img {
+    max-width: 100%; /* Image will never be wider than its parent container */
+    height: auto;    /* Maintains the image's aspect ratio */
+    display: block;  /* Removes default bottom spacing on images */
+    margin: 1rem auto; /* Centers the image with space above/below */
+    border-radius: 8px; /* Optional: matches your card styling */
+}
