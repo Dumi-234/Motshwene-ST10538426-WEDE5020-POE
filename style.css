@@ -1,0 +1,138 @@
+/* =========================================
+   2.2 CSS RESET & BASE STYLES
+   ========================================= */
+/* The brief asks for a CSS reset for consistency across browsers */
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-size: 16px; /* Base size */
+	line-height: 1.6; /* Improves readability */
+	color: #333333; /* Dark grey text */
+	background-color: #f4f4f4; /* Light grey background for the page */
+	padding: 20px;
+}
+
+/* =========================================
+   2.3 APPLY TYPOGRAPHY STYLES
+   ========================================= */
+h1, h2, h3 {
+	font-family: 'Georgia', serif; /* Different font for headings */
+	color: #1a1a1a;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+	color: #2c3e50; /* Dark blue for your brand */
+}
+
+h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+}
+
+p {
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	color: #555555;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: #ddd;
+	margin: 1rem 0;
+}
+
+/* =========================================
+   2.4 CREATE A LAYOUT STRUCTURE
+   ========================================= */
+/* Header styling */
+header {
+	background-color: #2c3e50; /* Dark blue background */
+	padding: 1.5rem 2rem;
+	border-radius: 8px;
+	margin-bottom: 2rem;
+	color: white;
+}
+
+/* Navigation Flexbox Layout */
+nav {
+	display: flex;
+	flex-wrap: wrap; /* Allows wrapping if screen gets too small */
+	gap: 1.5rem; /* Space between links */
+	margin-top: 1rem;
+}
+
+/* Main Content Grid Layout */
+main {
+	display: grid;
+	/* Using a single column layout for now, but styled as a card */
+	max-width: 1200px;
+	margin: 0 auto; /* Centers the main content */
+	background-color: #ffffff;
+	padding: 2.5rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+/* =========================================
+   2.5 APPLY VISUAL & INTERACTIVE STYLES
+   ========================================= */
+/* Navigation Links */
+nav a {
+	color: #ecf0f1; /* Off-white */
+	text-decoration: none;
+	font-weight: 500;
+	padding: 5px 0;
+	border-bottom: 2px solid transparent; /* Invisible border for hover effect */
+	transition: all 0.3s ease;
+}
+
+/* Pseudo-classes for interactivity (Required by brief) */
+nav a:hover {
+	color: #3498db; /* Light blue on hover */
+	border-bottom: 2px solid #3498db; /* Underline appears */
+}
+
+nav a:focus {
+	outline: 2px dashed #3498db; /* Accessibility outline */
+	outline-offset: 4px;
+}
+
+/* Styling the "Cart" link differently */
+nav a[href="#"] {
+	background-color: #e74c3c; /* Red button style */
+	color: white;
+	padding: 5px 15px;
+	border-radius: 4px;
+	margin-left: auto; /* Pushes the cart to the far right */
+}
+
+nav a[href="#"]:hover {
+	background-color: #c0392b; /* Darker red on hover */
+	border-bottom: none;
+}
+
+/* Hero Banner Styling */
+section {
+	text-align: center;
+	padding: 2rem 0;
+}
+
+section h2 {
+	margin-bottom: 1rem;
+	color: #2c3e50;
+}
+
+section p {
+	font-size: 1.1rem;
+}
